@@ -2,21 +2,14 @@ import wx
 
 from panels.main_frame_panels.right_panel import RightPanel
 from panels.main_frame_panels.left_panel import LeftPanel
-
 from frames.products_window import ProductsWindow
-
-"""
-Guides:
-https://www.blog.pythonlibrary.org/2018/10/19/wxpython-how-to-open-a-second-window-frame/
-https://dzone.com/articles/wxpython-how-create-login
-https://www.blog.pythonlibrary.org/2014/07/11/wxpython-how-to-create-a-login-dialog/
-"""
 
 class MainFrame(wx.Frame):
     def __init__(self, parent=None):
         super().__init__(parent, size=(900, 600), title='ABC Drugs')
 
         self.InitMenubar()
+        # self.InitToolbar()
 
         # Sizer for two panels
         self.hbox = wx.BoxSizer(wx.HORIZONTAL)
@@ -37,9 +30,18 @@ class MainFrame(wx.Frame):
         self.SetSizer(self.hbox)
         self.Center()
 
+    def InitToolbar(self):
+        toolbar = self.CreateToolBar()
+        toolbar.AddTool(wx.ID_ANY, "Products", wx.Bitmap("Open.bmp"))
+        toolbar.AddTool(wx.ID_ANY, "Manufacturers")
+        toolbar.AddTool(wx.ID_ANY, "Suppliers")
+        toolbar.AddTool(wx.ID_ANY, "Buyers")
+        toolbar.AddTool(wx.ID_ANY, "Transactions")
+        toolbar.Realize()  
+
     def InitMenubar(self):
         menubar = wx.MenuBar()
-
+        
         # Create File Menu
         fileMenu = wx.Menu()
         # home_option = fileMenu.Append(wx.ID_ANY, 'Ho&me', 'Go to Home')

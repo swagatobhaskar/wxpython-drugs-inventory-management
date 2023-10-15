@@ -36,11 +36,11 @@ class LoginDialog(wx.Dialog):
             (emp_password_input, 1, wx.EXPAND, 1)
             ])
         
-        # email & password sizer ***
+        # email & password sizer
         self.hbox_email_password = wx.BoxSizer(wx.HORIZONTAL)
         self.hbox_email_password.AddMany([
-            (self.hbox_email, 0, wx.EXPAND | wx.ALL, 5),
-            (self.hbox_password, 0, wx.EXPAND | wx.ALL, 5)
+            (self.hbox_email, 1, wx.EXPAND | wx.ALL, 5),
+            (self.hbox_password, 1, wx.EXPAND | wx.ALL, 5)
             ])
         
         # Horizontal sizer for buttons
