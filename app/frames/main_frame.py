@@ -3,6 +3,8 @@ import wx
 from panels.main_frame_panels.right_panel import RightPanel
 from panels.main_frame_panels.left_panel import LeftPanel
 
+from frames.products_window import ProductsWindow
+
 """
 Guides:
 https://www.blog.pythonlibrary.org/2018/10/19/wxpython-how-to-open-a-second-window-frame/
@@ -13,6 +15,7 @@ https://www.blog.pythonlibrary.org/2014/07/11/wxpython-how-to-create-a-login-dia
 class MainFrame(wx.Frame):
     def __init__(self, parent=None):
         super().__init__(parent, size=(900, 600), title='ABC Drugs')
+
         self.InitMenubar()
 
         # Sizer for two panels
@@ -32,7 +35,7 @@ class MainFrame(wx.Frame):
 
         # Set the sizer to the frame
         self.SetSizer(self.hbox)
-
+        self.Center()
 
     def InitMenubar(self):
         menubar = wx.MenuBar()
@@ -47,7 +50,7 @@ class MainFrame(wx.Frame):
         # Create Product Menu and its CRUD options as sub-menus
         productsMenu = wx.Menu()
         view_product = productsMenu.Append(wx.ID_ANY, 'View')
-        #self.Bind(wx.EVT_MENU, self.handleProducts, view_product)
+        self.Bind(wx.EVT_MENU, self.handleProducts, view_product)
         productsMenu.Append(wx.ID_ANY, 'Add')
         productsMenu.Append(wx.ID_ANY, 'Modify')
 
@@ -107,3 +110,7 @@ class MainFrame(wx.Frame):
 
         # StackOverflow
         wx.CallAfter(self.Destroy)
+
+    def handleProducts(self, event):
+        self.products_window = ProductsWindow(self)
+        self.products_window.Show()

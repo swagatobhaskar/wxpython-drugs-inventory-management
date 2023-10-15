@@ -1,4 +1,5 @@
 import wx
+from pubsub import pub
 
 from dialogs.login_dialog import LoginDialog
 
@@ -27,19 +28,17 @@ class RightPanel(wx.Panel):
         
         # Create Login button
         self.hbox_btns = wx.BoxSizer(wx.HORIZONTAL)
-        login_btn = wx.Button(self, label="Login")
-        login_btn.Bind(wx.EVT_BUTTON, self.handleLogin)
+        self.login_btn = wx.Button(self, label="Login")
+        self.login_btn.Bind(wx.EVT_BUTTON, self.handleLogin)
         
-        self.hbox_btns.Add(login_btn, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 10)
+        self.hbox_btns.Add(self.login_btn, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 10)
                 
         self.vbox_main.Add(self.vbox_contact, 0, wx.EXPAND | wx.ALL, 10)
         self.vbox_main.Add(self.hbox_btns, 0, wx.EXPAND | wx.ALL | wx.ALIGN_CENTER, 10)
 
         #---------------------------------------------------------------------
         """Field to appear will contain user info after a user logs in."""
-        # for child in self.hbox_btns.GetChildren():
-        #     # remove the auth buttons
-        #     print("Childs:: ", child)
+        pub.subscribe(self.hideLoginBtn, "loggedin_listener")
 
         self.SetSizer(self.vbox_main)
 
@@ -52,3 +51,8 @@ class RightPanel(wx.Panel):
         #     wx.OK | wx.ICON_EXCLAMATION)
         dlg = LoginDialog()
         dlg.ShowModal()
+
+    def hideLoginBtn(self, message):
+        if message == 'true':
+            self.login_btn.Hide()
+            self.hbox_btns.Layout()
