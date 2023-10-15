@@ -1,5 +1,7 @@
 import wx
 
+from dialogs.login_dialog import LoginDialog
+
 class RightPanel(wx.Panel):
     def __init__(self, parent):
         super().__init__(parent, style=wx.BORDER_SIMPLE)
@@ -23,24 +25,21 @@ class RightPanel(wx.Panel):
         self.vbox_contact.Add(org_name, 0, wx.BOTTOM | wx.ALIGN_LEFT, 5)
         self.vbox_contact.Add(address_label, 0, wx.TOP | wx.BOTTOM | wx.ALIGN_LEFT, 5)
         
-        # Create two buttons: Login and Add user
+        # Create Login button
         self.hbox_btns = wx.BoxSizer(wx.HORIZONTAL)
         login_btn = wx.Button(self, label="Login")
-        add_user_btn = wx.Button(self, label="Add User")
         login_btn.Bind(wx.EVT_BUTTON, self.handleLogin)
-        add_user_btn.Bind(wx.EVT_BUTTON, self.handleSignup, add_user_btn)
-
-        self.hbox_btns.Add(login_btn, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 10)
-        self.hbox_btns.Add(add_user_btn, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 10)
         
+        self.hbox_btns.Add(login_btn, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 10)
+                
         self.vbox_main.Add(self.vbox_contact, 0, wx.EXPAND | wx.ALL, 10)
         self.vbox_main.Add(self.hbox_btns, 0, wx.EXPAND | wx.ALL | wx.ALIGN_CENTER, 10)
 
         #---------------------------------------------------------------------
-        """Field to appear containing user info after a user logs in."""
-        for child in self.hbox_btns.GetChildren():
-            # remove the auth buttons
-            print("Childs:: ", child)
+        """Field to appear will contain user info after a user logs in."""
+        # for child in self.hbox_btns.GetChildren():
+        #     # remove the auth buttons
+        #     print("Childs:: ", child)
 
         self.SetSizer(self.vbox_main)
 
@@ -49,8 +48,7 @@ class RightPanel(wx.Panel):
         
     def handleLogin(self, event):
         # open form in a popup dialog
-        wx.MessageBox("Feature not ready!")
-
-    def handleSignup(self, event):
-        # open form in a popup dialog
-        wx.MessageBox("Feature not ready!")
+        # wx.MessageBox("Feature not ready!",'Info',
+        #     wx.OK | wx.ICON_EXCLAMATION)
+        dlg = LoginDialog()
+        dlg.ShowModal()
