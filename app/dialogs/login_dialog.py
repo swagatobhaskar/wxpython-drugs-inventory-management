@@ -11,6 +11,10 @@ class LoginDialog(wx.Dialog):
         self.Center()
 
     def InitFormUI(self):
+        """
+        https://coderslegacy.com/wxpython-tutorial/flexgridsizer/
+        https://coderslegacy.com/python/wxpython-sizers-tutorial/
+        """
         # vertical sizer for email and password input
         self.vbox_inputs = wx.BoxSizer(wx.VERTICAL)
 
