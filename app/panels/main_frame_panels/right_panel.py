@@ -62,14 +62,13 @@ class RightPanel(wx.Panel):
         if self.logout_btn.IsShown():
             self.logout_btn.Hide()
             self.login_btn.Show()
+            self.btn_grid_panel.Hide()
 
     def handleLoginDialog(self, event):
         # wx.MessageBox("Feature not ready!",'Info',
         #     wx.OK | wx.ICON_EXCLAMATION)
         dlg = LoginDialog()
-        dlg.ShowModal()
-
-    
+        dlg.ShowModal()  
 
     def hideAndShowButtons(self, message):
         if message == 'true':
