@@ -68,7 +68,7 @@ class RightPanel(wx.Panel):
             (orders_btn, 1, wx.EXPAND),
         ])
         self.grid_btns_wrapper.Add(grid_btns, flag = wx.ALL | wx.EXPAND, border = 15)
-        self.grid_btns_wrapper.Hide()
+        # self.grid_btns_wrapper.Hide()
         """
         https://stackoverflow.com/questions/42370928/wxpython-hide-a-widget-and-remove-the-leftover-space
         """
