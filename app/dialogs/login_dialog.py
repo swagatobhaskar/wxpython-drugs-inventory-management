@@ -11,16 +11,14 @@ class LoginDialog(wx.Dialog):
         self.Center()
 
     def InitFormUI(self):
-        """
-        https://coderslegacy.com/wxpython-tutorial/flexgridsizer/
-        https://coderslegacy.com/python/wxpython-sizers-tutorial/
-        """
         #------------------------------------------------------------------
-        
+        # font = wx.SystemSettings.GetFont(wx.SYS_SYSTEM_FONT)
+        # font.SetPointSize(9)
+
         # define the widgets
         emp_email_lbl = wx.StaticText(self, label="Email:")
         emp_email_input = wx.TextCtrl(self, size=(220, 20)) # size=(width, height)
-        # emp_email_input.SetFont(font1)
+        # emp_email_input.SetFont(font)
 
         # horizontal sizer for password label and input        
         emp_password_lbl = wx.StaticText(self, label="Password:")

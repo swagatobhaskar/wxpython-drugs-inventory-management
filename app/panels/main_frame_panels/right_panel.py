@@ -4,7 +4,6 @@ from pubsub import pub
 from dialogs.login_dialog import LoginDialog
 from frames.products_window import ProductsWindow
 
-
 class RightPanel(wx.Panel):
     def __init__(self, parent):
         super().__init__(parent, style=wx.BORDER_SIMPLE)
@@ -13,6 +12,8 @@ class RightPanel(wx.Panel):
 
         # main vertical sizer for this panel   
         self.vbox_main = wx.BoxSizer(wx.VERTICAL)
+        
+        #-------------------------------------------------------
         # Sizers for contact info, auth form
         self.vbox_contact = wx.BoxSizer(wx.VERTICAL)
 
@@ -24,17 +25,71 @@ class RightPanel(wx.Panel):
 
         address = """66B, Tower Street\nOld Water Park,\nXYZ City, 123456\nContact: +91 1234 8899"""
         address_label = wx.StaticText(self, label=address)
-            
-        self.vbox_contact.Add(org_name, 0, wx.BOTTOM | wx.ALIGN_LEFT, 5)
-        self.vbox_contact.Add(address_label, 0, wx.TOP | wx.BOTTOM | wx.ALIGN_LEFT, 5)
-        
+                
         # Create Login button
-        self.hbox_btns = wx.BoxSizer(wx.HORIZONTAL)
         self.login_btn = wx.Button(self, label="Login")
         self.login_btn.Bind(wx.EVT_BUTTON, self.handleLogin)
 
-        #--------------------------------------------------------------
-        self.grid_btns_wrapper = wx.BoxSizer(wx.VERTICAL)
+        self.logout_btn = wx.Button(self, label="Log Out")
+        self.logout_btn.Bind(wx.EVT_BUTTON, self.handleLogout)
+        self.logout_btn.Hide()
+
+        self.btn_grid_panel = ButtonsGridPanel(self)
+        self.btn_grid_panel.Hide()
+
+        #-----------------------------------------------------------
+        self.hbox_btns = wx.BoxSizer(wx.HORIZONTAL)
+        self.hbox_btns.AddMany(
+            [(self.login_btn, 0, wx.ALL, 2), (self.logout_btn, 0, wx.ALL, 2)]
+            )
+
+        self.vbox_contact.Add(org_name, 0, wx.BOTTOM | wx.ALIGN_LEFT, 5)
+        self.vbox_contact.Add(address_label, 0, wx.TOP | wx.BOTTOM | wx.ALIGN_LEFT, 5)
+        self.vbox_contact.Add(self.hbox_btns, 0, wx.ALL | wx.ALIGN_CENTER, 10)
+
+        self.vbox_main.Add(self.vbox_contact, 0, wx.EXPAND | wx.ALL, 10)
+        self.vbox_main.Add(self.btn_grid_panel, 1, wx.EXPAND | wx.ALL, 5)
+        self.SetSizer(self.vbox_main)
+        #---------------------------------------------------------------------
+        
+        pub.subscribe(self.hideAndShowButtons, "loggedin_listener")
+
+        self.Layout()
+
+    def handleLogout(self, event):
+        pub.sendMessage('loggedin_listener', message='false')
+        
+        if self.logout_btn.IsShown():
+            self.logout_btn.Hide()
+            self.login_btn.Show()
+
+    def handleLogin(self, event):
+        # wx.MessageBox("Feature not ready!",'Info',
+        #     wx.OK | wx.ICON_EXCLAMATION)
+        dlg = LoginDialog()
+        dlg.ShowModal()
+
+    def hideAndShowButtons(self, message):
+        if message == 'true':
+            self.login_btn.Hide()
+            
+            if not self.logout_btn.IsShown():
+                # Show the logout button
+                # insert a confirmation dialog!!
+                self.logout_btn.Show()
+                self.hbox_btns.Layout()
+            
+            if not self.btn_grid_panel.IsShown():
+                # show the functionality buttons
+                self.btn_grid_panel.Show()
+                self.vbox_main.Layout()
+
+
+class ButtonsGridPanel(wx.Panel):
+    def __init__(self, parent):
+        super().__init__(parent)
+
+        self.grid_btns = wx.GridSizer(3, 3, 5, 5) # row, col, vgap, hgap
 
         products_btn = wx.Button(self, label='Products')
         products_btn.Bind(wx.EVT_MENU, self.handleProducts)
@@ -57,8 +112,7 @@ class RightPanel(wx.Panel):
         orders_btn = wx.Button(self, label='Orders')
         orders_btn.Bind(wx.EVT_MENU, self.handleOrders)
 
-        grid_btns = wx.GridSizer(3, 3, 5, 5) # row, col, vgap, hgap
-        grid_btns.AddMany([
+        self.grid_btns.AddMany([
             (products_btn, 1, wx.EXPAND),
             (manufacturers_btn, 1, wx.EXPAND),
             (suppliers_btn, 1, wx.EXPAND),
@@ -66,43 +120,10 @@ class RightPanel(wx.Panel):
             (sales_btn, 1, wx.EXPAND),
             (transactions_btn, 1, wx.EXPAND),
             (orders_btn, 1, wx.EXPAND),
-        ])
-        self.grid_btns_wrapper.Add(grid_btns, flag = wx.ALL | wx.EXPAND, border = 15)
-        # self.grid_btns_wrapper.Hide()
-        """
-        https://stackoverflow.com/questions/42370928/wxpython-hide-a-widget-and-remove-the-leftover-space
-        """
-        #-----------------------------------------------------------
+            ])
         
-        self.hbox_btns.Add(self.login_btn, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALL, 10)
+        self.SetSizer(self.grid_btns)
         
-        self.vbox_main.Add(self.vbox_contact, 0, wx.EXPAND | wx.ALL, 10)
-        self.vbox_main.Add(self.hbox_btns, 0, wx.EXPAND | wx.ALL | wx.ALIGN_CENTER, 10)
-
-        #---------------------------------------------------------------------
-        """Field to appear will contain user info after a user logs in."""
-        pub.subscribe(self.hideAndShowButtons, "loggedin_listener")
-        #pub.subscribe(self.showFunctionalityButtons, "loggedin_listener")
-
-        self.SetSizer(self.vbox_main)
-
-        # self.SetAutoLayout(True)
-        # self.Layout()
-        
-    def handleLogin(self, event):
-        # open form in a popup dialog
-        # wx.MessageBox("Feature not ready!",'Info',
-        #     wx.OK | wx.ICON_EXCLAMATION)
-        dlg = LoginDialog()
-        dlg.ShowModal()
-
-    def hideAndShowButtons(self, message):
-        if message == 'true':
-            self.login_btn.Hide()
-            self.hbox_btns.Layout()
-            # show the functionality buttons
-            self.grid_btns_wrapper.Show()
-
     def handleProducts(self, event):
         self.products_window = ProductsWindow(self)
         self.products_window.Show()
@@ -123,4 +144,4 @@ class RightPanel(wx.Panel):
         pass
 
     def handleOrders(self, event):
-        pass 
+        pass
