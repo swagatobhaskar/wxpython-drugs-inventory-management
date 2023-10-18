@@ -9,7 +9,6 @@ class MainFrame(wx.Frame):
         super().__init__(parent, size=(900, 600), title='ABC Drugs')
 
         self.InitMenubar()
-        # self.InitToolbar()
 
         # Sizer for two panels
         self.hbox = wx.BoxSizer(wx.HORIZONTAL)
@@ -29,15 +28,6 @@ class MainFrame(wx.Frame):
         # Set the sizer to the frame
         self.SetSizer(self.hbox)
         self.Center()
-
-    def InitToolbar(self):
-        toolbar = self.CreateToolBar()
-        toolbar.AddTool(wx.ID_ANY, "Products", wx.Bitmap("Open.bmp"))
-        toolbar.AddTool(wx.ID_ANY, "Manufacturers")
-        toolbar.AddTool(wx.ID_ANY, "Suppliers")
-        toolbar.AddTool(wx.ID_ANY, "Buyers")
-        toolbar.AddTool(wx.ID_ANY, "Transactions")
-        toolbar.Realize()  
 
     def InitMenubar(self):
         menubar = wx.MenuBar()

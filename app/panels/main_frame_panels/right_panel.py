@@ -28,7 +28,7 @@ class RightPanel(wx.Panel):
                 
         # Create Login button
         self.login_btn = wx.Button(self, label="Login")
-        self.login_btn.Bind(wx.EVT_BUTTON, self.handleLogin)
+        self.login_btn.Bind(wx.EVT_BUTTON, self.handleLoginDialog)
 
         self.logout_btn = wx.Button(self, label="Log Out")
         self.logout_btn.Bind(wx.EVT_BUTTON, self.handleLogout)
@@ -63,11 +63,13 @@ class RightPanel(wx.Panel):
             self.logout_btn.Hide()
             self.login_btn.Show()
 
-    def handleLogin(self, event):
+    def handleLoginDialog(self, event):
         # wx.MessageBox("Feature not ready!",'Info',
         #     wx.OK | wx.ICON_EXCLAMATION)
         dlg = LoginDialog()
         dlg.ShowModal()
+
+    
 
     def hideAndShowButtons(self, message):
         if message == 'true':
@@ -92,25 +94,25 @@ class ButtonsGridPanel(wx.Panel):
         self.grid_btns = wx.GridSizer(3, 3, 5, 5) # row, col, vgap, hgap
 
         products_btn = wx.Button(self, label='Products')
-        products_btn.Bind(wx.EVT_MENU, self.handleProducts)
+        products_btn.Bind(wx.EVT_BUTTON, self.handleProducts)
 
         manufacturers_btn = wx.Button(self, label='Manufacturers')
-        manufacturers_btn.Bind(wx.EVT_MENU, self.handleManufacturers)
+        manufacturers_btn.Bind(wx.EVT_BUTTON, self.handleManufacturers)
 
         suppliers_btn = wx.Button(self, label='Suppliers')
-        suppliers_btn.Bind(wx.EVT_MENU, self.handleSuppliers)
+        suppliers_btn.Bind(wx.EVT_BUTTON, self.handleSuppliers)
 
         buyers_btn = wx.Button(self, label='Buyers')
-        buyers_btn.Bind(wx.EVT_MENU, self.handleBuyers)
+        buyers_btn.Bind(wx.EVT_BUTTON, self.handleBuyers)
 
         sales_btn = wx.Button(self, label='Sales')
-        sales_btn.Bind(wx.EVT_MENU, self.handleSales)
+        sales_btn.Bind(wx.EVT_BUTTON, self.handleSales)
 
         transactions_btn = wx.Button(self, label='Transactions')
-        transactions_btn.Bind(wx.EVT_MENU, self.handleTransactions)
+        transactions_btn.Bind(wx.EVT_BUTTON, self.handleTransactions)
 
         orders_btn = wx.Button(self, label='Orders')
-        orders_btn.Bind(wx.EVT_MENU, self.handleOrders)
+        orders_btn.Bind(wx.EVT_BUTTON, self.handleOrders)
 
         self.grid_btns.AddMany([
             (products_btn, 1, wx.EXPAND),
@@ -123,11 +125,11 @@ class ButtonsGridPanel(wx.Panel):
             ])
         
         self.SetSizer(self.grid_btns)
-        
+      
     def handleProducts(self, event):
         self.products_window = ProductsWindow(self)
         self.products_window.Show()
-
+        
     def handleManufacturers(self, event):
         pass
 
