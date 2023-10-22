@@ -1,0 +1,364 @@
+,mfr_id,mfr_name,address_1,pin,email,phone
+0,1,OTSUKA,Mumbai,637793,otsuka@mail.com,2083135240
+1,2,OTSUKA PHARM CO LTD,Mumbai,100913,otsukapharmcoltd@mail.com,8617796496
+2,3,PFIZER INC,DEF City,610687,pfizerinc@mail.com,4181850981
+3,4,SUN PHARM INDS INC,Dehradun,426407,sunpharmindsinc@mail.com,2284108156
+4,5,SENTYNL THERAPS INC,DEF City,833147,sentynltherapsinc@mail.com,8584127094
+5,6,HOFFMANN LA ROCHE,ABC City,331113,hoffmannlaroche@mail.com,2138268919
+6,7,WOODWARD,Dehradun,598222,woodward@mail.com,3870282016
+7,8,AYTU,Mumbai,342326,aytu@mail.com,5996657750
+8,9,GENENTECH,Dehradun,103014,genentech@mail.com,7222073849
+9,10,MALLINCKRODT ARD,DEF City,854114,mallinckrodtard@mail.com,6751693853
+10,11,CEPHALON,ABC City,141509,cephalon@mail.com,8780078469
+11,12,APIL,Pune,582583,apil@mail.com,9074462781
+12,13,WARNER CHILCOTT,Mumbai,402404,warnerchilcott@mail.com,7887172631
+13,14,TAKEDA PHARMS USA,Mumbai,173283,takedapharmsusa@mail.com,7474816525
+14,15,ALEXZA PHARMS,ABC City,745536,alexzapharms@mail.com,1759476645
+15,16,TEVA WOMENS,Mohali,158099,tevawomens@mail.com,8046630277
+16,17,SPROUT PHARMS,ABC City,148575,sproutpharms@mail.com,2096314775
+17,18,BAYER HLTHCARE,Dehradun,378942,bayerhlthcare@mail.com,5648385889
+18,19,PURDUE PHARMA LP,Mumbai,822129,purduepharmalp@mail.com,9195410012
+19,20,SANOFI-AVENTIS US,Mumbai,600943,sanofi-aventisus@mail.com,4854814736
+20,21,NEOS THERAPS INC,DEF City,536366,neostherapsinc@mail.com,8482478364
+21,22,NEOS THERAPS,Mumbai,506663,neostheraps@mail.com,1665630507
+22,23,MANNKIND,Dehradun,593000,mannkind@mail.com,5790438493
+23,24,ETON,ABC City,341731,eton@mail.com,4960000684
+24,25,SANOFI AVENTIS US,Pune,569238,sanofiaventisus@mail.com,6183307441
+25,26,AMGEN INC,Mohali,621119,amgeninc@mail.com,5002058092
+26,27,ACORDA,ABC City,466043,acorda@mail.com,1924220490
+27,28,SPECGX LLC,DEF City,211855,specgxllc@mail.com,4286028405
+28,29,ATNAHS PHARMA US,Kolkata,307681,atnahspharmaus@mail.com,7156312274
+29,30,ABBVIE,DEF City,845226,abbvie@mail.com,5227303121
+30,31,PHARMACIA AND UPJOHN,DEF City,977753,pharmaciaandupjohn@mail.com,7182119521
+31,32,KVK TECH INC,Dehradun,464719,kvktechinc@mail.com,3238414007
+32,33,BAUSCH,Pune,223507,bausch@mail.com,4368580764
+33,34,RHODES PHARMS,Mumbai,917537,rhodespharms@mail.com,4926893777
+34,35,SUNOVION PHARMS INC,ABC City,544787,sunovionpharmsinc@mail.com,3597084691
+35,36,AMGEN,Pune,759774,amgen@mail.com,7513404633
+36,37,NOVARTIS,Mohali,731708,novartis@mail.com,7974893480
+37,38,INSMED INC,Mumbai,423331,insmedinc@mail.com,7216318817
+38,39,ALKERMES INC,Mohali,792005,alkermesinc@mail.com,4080051529
+39,40,PFIZER,Mohali,314173,pfizer@mail.com,8517336177
+40,41,ZYLA,Dehradun,710815,zyla@mail.com,6367876550
+41,42,ASTELLAS,Kolkata,945920,astellas@mail.com,5638476809
+42,43,TEVA BRANDED PHARM,ABC City,431136,tevabrandedpharm@mail.com,3841792785
+43,44,TEVA NEUROSCIENCE,Mumbai,374119,tevaneuroscience@mail.com,5575019232
+44,45,AXSOME INC,DEF City,948000,axsomeinc@mail.com,6191247464
+45,46,SB PHARMCO,Pune,845663,sbpharmco@mail.com,8726151566
+46,47,ENDO PHARMS INC,DEF City,669818,endopharmsinc@mail.com,5437840449
+47,48,KING PHARMS LLC,Mohali,368656,kingpharmsllc@mail.com,1299891295
+48,49,BIOGEN,Delhi,771626,biogen@mail.com,6858899531
+49,50,ELI LILLY AND CO,Kolkata,366096,elilillyandco@mail.com,8992903153
+50,51,COMMAVE THERAP,Dehradun,871515,commavetherap@mail.com,2391308356
+51,52,EISAI INC,Delhi,582602,eisaiinc@mail.com,3308687589
+52,53,EMD SERONO INC,Mohali,415276,emdseronoinc@mail.com,6432081008
+53,54,MELINTA,Mohali,594809,melinta@mail.com,6046105161
+54,55,BDSI,DEF City,609407,bdsi@mail.com,6132895481
+55,56,MERCK SHARP DOHME,Delhi,679907,mercksharpdohme@mail.com,5329000173
+56,57,GLAXOSMITHKLINE LLC,Kolkata,560552,glaxosmithklinellc@mail.com,1582681972
+57,58,HUMAN GENOME SCIENCES INC.,Mumbai,320624,humangenomesciencesinc.@mail.com,3055479869
+58,59,PHARMAESSENTIA CORP,Kolkata,727574,pharmaessentiacorp@mail.com,8740516419
+59,60,BAYER HEALTHCARE PHARMS,Mumbai,618435,bayerhealthcarepharms@mail.com,1760858797
+60,61,PORTOLA PHARMS INC,Mumbai,905490,portolapharmsinc@mail.com,3216848051
+61,62,ASCEND THERAPS US,Mohali,327624,ascendtherapsus@mail.com,7828385897
+62,63,GLAXOSMITHKLINE,Mohali,512306,glaxosmithkline@mail.com,8184306593
+63,64,ROCHE,Mohali,189264,roche@mail.com,8708755684
+64,65,ALVOGEN,ABC City,997445,alvogen@mail.com,5607382321
+65,66,ALLERGAN,Kolkata,185794,allergan@mail.com,2271211377
+66,67,ARRAY BIOPHARMA INC,DEF City,772761,arraybiopharmainc@mail.com,9190787073
+67,68,THERACOS BIO,ABC City,464324,theracosbio@mail.com,5613258411
+68,69,SCYNEXIS,Mohali,901542,scynexis@mail.com,4962464554
+69,70,ASTRAZENECA,Delhi,199379,astrazeneca@mail.com,8697053340
+70,71,SEBELA IRELAND LTD,Mohali,170824,sebelairelandltd@mail.com,2184409527
+71,72,TG Therapeutics,Delhi,640710,tgtherapeutics@mail.com,2804072782
+72,73,UCB INC,Mohali,468574,ucbinc@mail.com,6670199052
+73,74,BRAEBURN,Mumbai,236742,braeburn@mail.com,7207389019
+74,75,SUNOVION,Pune,147038,sunovion@mail.com,9798659950
+75,76,ASTRAZENECA AB,Delhi,358110,astrazenecaab@mail.com,6970382255
+76,77,AMYLIN,ABC City,228672,amylin@mail.com,9203876650
+77,78,ASSERTIO,Kolkata,143862,assertio@mail.com,6667885840
+78,79,BRISTOL MYERS SQUIBB,Pune,528058,bristolmyerssquibb@mail.com,3853218923
+79,80,INTRA-CELLULAR,Delhi,392618,intra-cellular@mail.com,2532876074
+80,81,GENZYME CORP,Pune,694201,genzymecorp@mail.com,9408019890
+81,82,TEVA PHARMS USA,DEF City,855653,tevapharmsusa@mail.com,6479512822
+82,83,UPJOHN,Delhi,146801,upjohn@mail.com,4764740376
+83,84,GD SEARLE LLC,ABC City,860271,gdsearlellc@mail.com,2851978650
+84,85,FOREST LABS,Kolkata,669574,forestlabs@mail.com,8480207848
+85,86,ROCHE PALO,Mumbai,790920,rochepalo@mail.com,6608256514
+86,87,PARKE DAVIS,Mumbai,267860,parkedavis@mail.com,3362967996
+87,88,PF PRISM CV,Kolkata,891651,pfprismcv@mail.com,3544383717
+88,89,MYLAN PHARMS INC,Delhi,322264,mylanpharmsinc@mail.com,2519661596
+89,90,ALMATICA,Mohali,161443,almatica@mail.com,8623666484
+90,91,FERRING PHARMS INC,Delhi,494017,ferringpharmsinc@mail.com,5980418299
+91,92,MERCK,Delhi,713834,merck@mail.com,3371568833
+92,93,HIKMA,Mumbai,206694,hikma@mail.com,8949814300
+93,94,AR HOLDING CO INC,Kolkata,615786,arholdingcoinc@mail.com,9846187781
+94,95,GENETECH,ABC City,394641,genetech@mail.com,7293134790
+95,96,AFT Pharmaceuticals,Kolkata,658724,aftpharmaceuticals@mail.com,7253005401
+96,97,JANSSEN PHARMS,Dehradun,390536,janssenpharms@mail.com,1258396931
+97,98,PURPLE BIOTECH,ABC City,405015,purplebiotech@mail.com,5886824019
+98,99,NALPROPION,Dehradun,598359,nalpropion@mail.com,3331178755
+99,100,CIPHER PHARMS INC,ABC City,968453,cipherpharmsinc@mail.com,9344665950
+100,101,SECURA,Dehradun,452665,secura@mail.com,6735226107
+101,102,WYETH PHARMS,Mohali,107385,wyethpharms@mail.com,4009714144
+102,103,NOVARTIS PHARMS CORP,Dehradun,488152,novartispharmscorp@mail.com,3147815476
+103,104,BOEHRINGER INGELHEIM,Kolkata,356696,boehringeringelheim@mail.com,4607686330
+104,105,LILLY,ABC City,726881,lilly@mail.com,9209462649
+105,106,VALEANT PHARM INTL,Pune,522633,valeantpharmintl@mail.com,4380476057
+106,107,XANODYNE PHARM,DEF City,895178,xanodynepharm@mail.com,3080067685
+107,108,"REVANCE THERAPEUTICS, INC",Kolkata,177883,"revancetherapeutics,inc@mail.com",8792959165
+108,109,NOVEN PHARMS INC,DEF City,987687,novenpharmsinc@mail.com,6930423296
+109,110,VALIDUS PHARMS,Kolkata,936470,validuspharms@mail.com,7596733629
+110,111,GILEAD SCIENCES INC,Delhi,481373,gileadsciencesinc@mail.com,4962415508
+111,112,RECORDATI RARE,Delhi,755759,recordatirare@mail.com,4837888740
+112,113,ALEMBIC PHARMS LTD,DEF City,108967,alembicpharmsltd@mail.com,6444399202
+113,114,PRAGMA,DEF City,533476,pragma@mail.com,5978260933
+114,115,IMPAX LABS INC,Pune,648158,impaxlabsinc@mail.com,1981574027
+115,116,OUTLOOK PHARMS,Dehradun,779831,outlookpharms@mail.com,7635085427
+116,117,BIOCODEX SA,DEF City,594013,biocodexsa@mail.com,5875608328
+117,118,PHARMACIA,ABC City,784870,pharmacia@mail.com,8137316883
+118,119,GALT PHARMS,Dehradun,447484,galtpharms@mail.com,8604807914
+119,120,GUERBET,Delhi,954427,guerbet@mail.com,7083470086
+120,121,SUN PHARMA GLOBAL,Mohali,569735,sunpharmaglobal@mail.com,8298611799
+121,122,HORIZON,Kolkata,514287,horizon@mail.com,9026590626
+122,123,IRONWOOD PHARMS INC,DEF City,761851,ironwoodpharmsinc@mail.com,9429378677
+123,124,TRIS PHARMA INC,Pune,800760,trispharmainc@mail.com,1774440211
+124,125,IPSEN BIOPHARM LTD,Pune,958883,ipsenbiopharmltd@mail.com,7450588150
+125,126,MYLAN SPECIALITY LP,Mohali,113495,mylanspecialitylp@mail.com,5602094172
+126,127,WYETH PHARMS INC,Mohali,369200,wyethpharmsinc@mail.com,2739441750
+127,128,DAIICHI SANKYO INC,Delhi,450055,daiichisankyoinc@mail.com,5482990234
+128,129,TRIPOINT,Mumbai,662141,tripoint@mail.com,1466582534
+129,130,LIEBEL-FLARSHEIM COMPANY,Mumbai,574027,liebel-flarsheimcompany@mail.com,3121142927
+130,131,ALPHARMA PHARMS,Pune,859179,alpharmapharms@mail.com,6336976013
+131,132,SOMERSET,Mohali,483343,somerset@mail.com,7262656405
+132,133,IMMUNEX,ABC City,882789,immunex@mail.com,6621251712
+133,134,DAIICHI SANKYO,ABC City,404563,daiichisankyo@mail.com,1272561896
+134,135,BIOVERATIV THERAPEUTICS INC,Delhi,269271,bioverativtherapeuticsinc@mail.com,5967806653
+135,136,"GENETECH, INC",Mumbai,639377,"genetech,inc@mail.com",5141893968
+136,137,VELOXIS PHARMS INC,Mumbai,759964,veloxispharmsinc@mail.com,9557636604
+137,138,GW RES LTD,Kolkata,586777,gwresltd@mail.com,8731130293
+138,139,GENMAB US,ABC City,254534,genmabus@mail.com,2401460358
+139,140,VIIV HLTHCARE,ABC City,811309,viivhlthcare@mail.com,6604942098
+140,141,SANDOZ,Delhi,446140,sandoz@mail.com,6405246577
+141,142,BELCHER,Mohali,558412,belcher@mail.com,7508230105
+142,143,MAYNE PHARMA,Dehradun,971628,maynepharma@mail.com,9587154006
+143,144,SAMSUNG BIOEPIS CO LTD,ABC City,389459,samsungbioepiscoltd@mail.com,5209746779
+144,145,ARBOR PHARMS LLC,Kolkata,907832,arborpharmsllc@mail.com,7413707543
+145,146,NOVARTIS PHARMS,Mohali,333797,novartispharms@mail.com,4193478881
+146,147,LG CHEM LTD,Kolkata,370140,lgchemltd@mail.com,6105319224
+147,148,TOLMAR,Delhi,715511,tolmar@mail.com,8278301825
+148,149,PAR PHARM,Mumbai,488199,parpharm@mail.com,4512167513
+149,150,CHIESI,Pune,443112,chiesi@mail.com,8181555992
+150,151,TRAVERE THERAPEUTICS,Pune,671667,traveretherapeutics@mail.com,1780314873
+151,152,ZOGENIX INC,Dehradun,499011,zogenixinc@mail.com,3848534937
+152,153,ACTAVIS LABS UT INC,Dehradun,568526,actavislabsutinc@mail.com,3332091935
+153,154,CATALYST PHARMS,Delhi,748142,catalystpharms@mail.com,8420966994
+154,155,INST BIOCHEM,Mohali,864450,instbiochem@mail.com,3500670402
+155,156,BKK PHARMS,Delhi,745453,bkkpharms@mail.com,8649682575
+156,157,ENDO PHARMS,ABC City,865305,endopharms@mail.com,2407731420
+157,158,MERCK AND CO INC,Dehradun,240937,merckandcoinc@mail.com,5188752706
+158,159,ORGANON,Dehradun,912688,organon@mail.com,6101509130
+159,160,NPS PHARMS INC,DEF City,678400,npspharmsinc@mail.com,2687373932
+160,161,EVOKE PHARMA INC,Dehradun,366519,evokepharmainc@mail.com,9091999343
+161,162,ROMEG,Dehradun,101473,romeg@mail.com,4929721258
+162,163,BRAINTREE,DEF City,467584,braintree@mail.com,4120152302
+163,164,QUESTCOR PHARMA,Mohali,206541,questcorpharma@mail.com,3655437392
+164,165,PIERRE FABRE DERMA,Kolkata,335438,pierrefabrederma@mail.com,5869668884
+165,166,GENENTECH INC,Mumbai,313314,genentechinc@mail.com,1752019067
+166,167,ABBVIE INC,Dehradun,387325,abbvieinc@mail.com,8325298920
+167,168,GENUS,Pune,527999,genus@mail.com,7567899262
+168,169,PADAGIS US,Delhi,542775,padagisus@mail.com,2703456519
+169,170,SANDOZ INC,DEF City,523526,sandozinc@mail.com,5976495222
+170,171,ARDELYX INC,Dehradun,851299,ardelyxinc@mail.com,3396323344
+171,172,CELGENE CORP,Delhi,807084,celgenecorp@mail.com,6614379621
+172,173,ASTRAZENECA UK LTD,Dehradun,579406,astrazenecaukltd@mail.com,9743777503
+173,174,VERTEX PHARMS,Dehradun,805263,vertexpharms@mail.com,3635729490
+174,175,EGALET,ABC City,455978,egalet@mail.com,5536786832
+175,176,CHARTWELL MOLECULES,DEF City,877815,chartwellmolecules@mail.com,6527044410
+176,177,HERITAGE,Mumbai,956205,heritage@mail.com,7635640196
+177,178,RISING,Dehradun,840285,rising@mail.com,3028868071
+178,179,CELLTRION INC,Kolkata,458580,celltrioninc@mail.com,8018187448
+179,180,LEXICON PHARMACEUTICALS,DEF City,979742,lexiconpharmaceuticals@mail.com,1063424394
+180,181,IMPACT,Kolkata,173738,impact@mail.com,6830161273
+181,182,PURDUE PHARMA,Kolkata,742641,purduepharma@mail.com,5426487712
+182,183,SCHERING,ABC City,603316,schering@mail.com,9320134734
+183,184,HOFFMANN-LA ROCHE,Dehradun,473105,hoffmann-laroche@mail.com,6739434003
+184,185,EVOLUS INC,Dehradun,195029,evolusinc@mail.com,5477274863
+185,186,IRONSHORE PHARMS,ABC City,108488,ironshorepharms@mail.com,6141797248
+186,187,AMRYT,DEF City,208435,amryt@mail.com,5881661242
+187,188,DYAX CORP.,DEF City,937439,dyaxcorp.@mail.com,8821723076
+188,189,SANOFI SYNTHELABO,Dehradun,445387,sanofisynthelabo@mail.com,8807934568
+189,190,OSMOTICA PHARM CORP,DEF City,968997,osmoticapharmcorp@mail.com,8582388818
+190,191,CHEPLAPHARM,DEF City,876974,cheplapharm@mail.com,5532616599
+191,192,AZURITY,Kolkata,930323,azurity@mail.com,7263153907
+192,193,CORCEPT THERAP,Pune,814463,corcepttherap@mail.com,1416036871
+193,194,HORIZON PHARMA,Dehradun,593022,horizonpharma@mail.com,7172873892
+194,195,KASTLE THERAPS LLC,Pune,367382,kastletherapsllc@mail.com,5015165311
+195,196,AMNEAL PHARMS,Kolkata,434178,amnealpharms@mail.com,2591462321
+196,197,ACTAVIS LABS FL INC,ABC City,586010,actavislabsflinc@mail.com,8652193814
+197,198,AMNEAL PHARMS NY,Pune,283305,amnealpharmsny@mail.com,9962489236
+198,199,SMITHKLINE BEECHAM,Kolkata,631108,smithklinebeecham@mail.com,9352206479
+199,200,MICRO LABS,Delhi,771460,microlabs@mail.com,5891283351
+200,201,BTCP PHARMA,Dehradun,102801,btcppharma@mail.com,2601779820
+201,202,GENZYME,Kolkata,801114,genzyme@mail.com,7732165256
+202,203,GILEAD,Delhi,613553,gilead@mail.com,4619476898
+203,204,REGENERON PHARMACEUTICALS,Mumbai,612925,regeneronpharmaceuticals@mail.com,8497051221
+204,205,IBSA INST BIO,Dehradun,903530,ibsainstbio@mail.com,6056374033
+205,206,HERITAGE PHARMS INC,Mohali,857163,heritagepharmsinc@mail.com,1181183009
+206,207,OLTA PHARMS,Mohali,875575,oltapharms@mail.com,4032686471
+207,208,Almatica Pharma,Pune,844294,almaticapharma@mail.com,1992726120
+208,209,INNATE PHARMA,Kolkata,538259,innatepharma@mail.com,8187283989
+209,210,"GENENTECH, INC",DEF City,350463,"genentech,inc@mail.com",9187916752
+210,211,AURINIA,Mumbai,447315,aurinia@mail.com,7718896513
+211,212,ABBVIE ENDOCRINE INC,ABC City,597138,abbvieendocrineinc@mail.com,4468945274
+212,213,ANI PHARMS,Dehradun,265303,anipharms@mail.com,4634152985
+213,214,JAZZ PHARMS,Mumbai,828305,jazzpharms@mail.com,9616876168
+214,215,VALIDUS PHARMS INC,Kolkata,391137,validuspharmsinc@mail.com,4483950365
+215,216,ABBOTT,Pune,455878,abbott@mail.com,6485712865
+216,217,LANNETT CO INC,Dehradun,560395,lannettcoinc@mail.com,6586829035
+217,218,WOCKHARDT BIO AG,Mumbai,421126,wockhardtbioag@mail.com,2012775648
+218,219,SALIX PHARMS,Pune,793731,salixpharms@mail.com,2840009014
+219,220,DANCO LABS LLC,DEF City,497232,dancolabsllc@mail.com,3573406920
+220,221,Vifor International Inc,Mumbai,494232,viforinternationalinc@mail.com,9889946282
+221,222,HOFFMAN-LA ROCHE,ABC City,669212,hoffman-laroche@mail.com,1207340901
+222,223,HIKMA AMERICAS,Pune,785083,hikmaamericas@mail.com,9600606907
+223,224,HIKMA INTL PHARMS,Mumbai,364819,hikmaintlpharms@mail.com,6432721263
+224,225,AVONDALE PHARMS,Kolkata,449504,avondalepharms@mail.com,2694288978
+225,226,Aucta Pharmaceuticals,Kolkata,727136,auctapharmaceuticals@mail.com,1100868657
+226,227,MCNEIL CONSUMER,DEF City,473859,mcneilconsumer@mail.com,8047333887
+227,228,REDHILL,Mohali,927551,redhill@mail.com,8192566132
+228,229,FRESENIUS KABI USA,DEF City,977297,freseniuskabiusa@mail.com,9662471515
+229,230,BRACCO,Mohali,940034,bracco@mail.com,5317430556
+230,231,AEGERION,DEF City,644523,aegerion@mail.com,7513787922
+231,232,ELAN PHARM,Mohali,464074,elanpharm@mail.com,2438551268
+232,233,VALEANT,Delhi,454057,valeant@mail.com,8049236155
+233,234,XSPIRE PHARMA,ABC City,624005,xspirepharma@mail.com,7262750516
+234,235,SERENITY PHARMS LLC,Mumbai,430911,serenitypharmsllc@mail.com,2379479976
+235,236,EMD SERONO,Kolkata,134513,emdserono@mail.com,1978274212
+236,237,COLLEGIUM PHARM INC,DEF City,424870,collegiumpharminc@mail.com,3904836079
+237,238,SOVEREIGN PHARMS,Pune,914777,sovereignpharms@mail.com,4527387104
+238,239,INTERCEPT PHARMS INC,Delhi,713252,interceptpharmsinc@mail.com,1955657963
+239,240,ANGELINI PHARMA,Dehradun,195527,angelinipharma@mail.com,4504620336
+240,241,GE HEALTHCARE,Mumbai,994449,gehealthcare@mail.com,3721918577
+241,242,LUNDBECK PHARMS LLC,Kolkata,612184,lundbeckpharmsllc@mail.com,4104936021
+242,243,ACTELION,Mumbai,281889,actelion@mail.com,5341846953
+243,244,LIEBEL-FLARSHEIM,Delhi,983007,liebel-flarsheim@mail.com,9527681327
+244,245,INCYTE CORP,Pune,975273,incytecorp@mail.com,6409467441
+245,246,SUPERNUS PHARMS,Pune,210376,supernuspharms@mail.com,9005777946
+246,247,VISTAPHARM,Mohali,129195,vistapharm@mail.com,3216131550
+247,248,GENUS LIFESCIENCES,Kolkata,362288,genuslifesciences@mail.com,6324008085
+248,249,ACTAVIS ELIZABETH,ABC City,911134,actaviselizabeth@mail.com,7048240430
+249,250,NOVO,Delhi,518631,novo@mail.com,8261676293
+250,251,UPSHER SMITH LABS,Delhi,346907,upshersmithlabs@mail.com,5357768723
+251,252,BIOMARIN PHARM,Delhi,239151,biomarinpharm@mail.com,5393983419
+252,253,VIVUS INC,ABC City,212849,vivusinc@mail.com,7399099907
+253,254,CONCORDIA,Mumbai,691844,concordia@mail.com,4662583124
+254,255,APOTEX TECHNOLOGIES,Dehradun,773178,apotextechnologies@mail.com,7081718751
+255,256,NUVO PHARMS INC,Pune,866723,nuvopharmsinc@mail.com,7280167432
+256,257,VINTAGE PHARMS LLC,Kolkata,863047,vintagepharmsllc@mail.com,2504050552
+257,258,MYLAN SPECLT,Mohali,147638,mylanspeclt@mail.com,1491381281
+258,259,DIGESTIVE CARE INC,Mohali,507389,digestivecareinc@mail.com,6280753052
+259,260,BIOGEN IDEC INC,Pune,938266,biogenidecinc@mail.com,2845454175
+260,261,SALIX,Mumbai,354264,salix@mail.com,4907804365
+261,262,CELGENE,ABC City,539116,celgene@mail.com,3677180909
+262,263,AVION PHARMS,Mumbai,311113,avionpharms@mail.com,3932956009
+263,264,MYLAN IRELAND LTD,Kolkata,743606,mylanirelandltd@mail.com,1764985162
+264,265,TAKEDA PHARMS NA,Mumbai,559830,takedapharmsna@mail.com,8622548666
+265,266,COVIS,Dehradun,358675,covis@mail.com,6205534776
+266,267,TITAN PHARMS,Delhi,371344,titanpharms@mail.com,5184433336
+267,268,DAVA PHARMS INC,ABC City,904381,davapharmsinc@mail.com,8132916716
+268,269,DEPOMED INC,Mohali,430513,depomedinc@mail.com,2114838164
+269,270,LEO PHARMA AS,DEF City,973429,leopharmaas@mail.com,2927574457
+270,271,ATHENA,Dehradun,970598,athena@mail.com,1819267019
+271,272,TERSERA,Mohali,708137,tersera@mail.com,9197722884
+272,273,VIVUS,Dehradun,621752,vivus@mail.com,9933521361
+273,274,SUN PHARM INDUSTRIES,Mumbai,424779,sunpharmindustries@mail.com,6564096750
+274,275,NEXTWAVE PHARMS,ABC City,283442,nextwavepharms@mail.com,6477107969
+275,276,NEXTWAVE,Dehradun,297623,nextwave@mail.com,7655445183
+276,277,IDORSIA PHARMACEUTICALS LTD.,Mumbai,912640,idorsiapharmaceuticalsltd.@mail.com,8508160695
+277,278,HORIZON THERAP,ABC City,862438,horizontherap@mail.com,1139085452
+278,279,SERONO INC,DEF City,251367,seronoinc@mail.com,7663044637
+279,280,STRONGBRIDGE,Mohali,167710,strongbridge@mail.com,3502038860
+280,281,MEDA PHARMS,ABC City,209254,medapharms@mail.com,6683467972
+281,282,SMITH AND NEPHEW,Dehradun,730669,smithandnephew@mail.com,6135154039
+282,283,ORGANON USA INC,Kolkata,950921,organonusainc@mail.com,5132012791
+283,284,CENTOCOR INC,Delhi,745507,centocorinc@mail.com,1579470650
+284,285,HOSPIRA INC,ABC City,114211,hospirainc@mail.com,3216224732
+285,286,PERSION,DEF City,629211,persion@mail.com,4501025514
+286,287,OHEMO LIFE,ABC City,285498,ohemolife@mail.com,2524240600
+287,288,JACOBUS PHARM CO INC,DEF City,277670,jacobuspharmcoinc@mail.com,6420377136
+288,289,NOVO NORDISK INC,Kolkata,439286,novonordiskinc@mail.com,7704809264
+289,290,KOWA PHARMS,Dehradun,441146,kowapharms@mail.com,9815671366
+290,291,ADDMEDICA SAS,Delhi,907854,addmedicasas@mail.com,9534593348
+291,292,CURRAX,Mumbai,756224,currax@mail.com,4321812344
+292,293,VALEANT LUXEMBOURG,Delhi,270425,valeantluxembourg@mail.com,7337212536
+293,294,CENTOCOR ORTHO BIOTECH INC,Kolkata,700457,centocororthobiotechinc@mail.com,8164091522
+294,295,JANSSEN BIOTECH,Delhi,244654,janssenbiotech@mail.com,3789030045
+295,296,MSD MERCK CO,Mohali,608457,msdmerckco@mail.com,5841980122
+296,297,JANSSEN THERAP,Pune,675178,janssentherap@mail.com,4875085185
+297,298,FOUGERA PHARMS,Dehradun,520202,fougerapharms@mail.com,4033034815
+298,299,ALEXION PHARM,DEF City,815032,alexionpharm@mail.com,1861869311
+299,300,MAYNE PHARMA INC,ABC City,963091,maynepharmainc@mail.com,1368592164
+300,301,STIEFEL LABS INC,Delhi,201107,stiefellabsinc@mail.com,3495282704
+301,302,SUN PHARM INDS LTD,Dehradun,713595,sunpharmindsltd@mail.com,5542064189
+302,303,"Boehringer Ingelheim Pharmaceuticals, Inc",Kolkata,827696,"boehringeringelheimpharmaceuticals,inc@mail.com",7631366549
+303,304,APRECIA PHARMS,ABC City,658184,apreciapharms@mail.com,2371925348
+304,305,BIONPHARMA INC,ABC City,372629,bionpharmainc@mail.com,6632187123
+305,306,INDIVIOR INC,Delhi,924008,indiviorinc@mail.com,8284865634
+306,307,BRAINTREE LABS,Pune,364956,braintreelabs@mail.com,2586248684
+307,308,BRAINTREE LABORATORIES,ABC City,237302,braintreelaboratories@mail.com,7869943689
+308,309,JAZZ,ABC City,688285,jazz@mail.com,7380651077
+309,310,ENDO PHARM,Pune,905032,endopharm@mail.com,6041309132
+310,311,ODYSSEY PHARMS,Pune,368727,odysseypharms@mail.com,2884176686
+311,312,HERON THERAPS INC,Pune,898183,herontherapsinc@mail.com,3617283081
+312,313,CPPI CV,Pune,534617,cppicv@mail.com,7176856093
+313,314,AQUESTIVE,Dehradun,869578,aquestive@mail.com,3874332988
+314,315,TEVA PHARMS INTL,DEF City,651793,tevapharmsintl@mail.com,7806368634
+315,316,NOVARTIS PHARMACEUTICALS,Dehradun,131160,novartispharmaceuticals@mail.com,6377696114
+316,317,CHEMOCENTRYX,DEF City,857006,chemocentryx@mail.com,1755638078
+317,318,EPIZYME INC,Mumbai,547793,epizymeinc@mail.com,1718925790
+318,319,AKCEA THERAPS,Mohali,998971,akceatheraps@mail.com,3016366073
+319,320,AUXILIUM PHARMS LLC,DEF City,568211,auxiliumpharmsllc@mail.com,3693240622
+320,321,SLAYBACK PHARMA LLC,Kolkata,561640,slaybackpharmallc@mail.com,5992519544
+321,322,SERVIER,DEF City,812377,servier@mail.com,1466493551
+322,323,SEAGEN,Delhi,760496,seagen@mail.com,8419157598
+323,324,ORTHO MCNEIL JANSSEN,Mohali,696052,orthomcneiljanssen@mail.com,9434931967
+324,325,BAXTER HLTHCARE CORP,Dehradun,612363,baxterhlthcarecorp@mail.com,9995756521
+325,326,APOTEX INC,Pune,874325,apotexinc@mail.com,1701135026
+326,327,IMPEL NEUROPHARMA,Delhi,551719,impelneuropharma@mail.com,4902808609
+327,328,MAINPOINTE,Mohali,240425,mainpointe@mail.com,9727807158
+328,329,RADIUS HEALTH INC,Mumbai,276107,radiushealthinc@mail.com,4136370658
+329,330,BIOGEN IDEC,Mumbai,208671,biogenidec@mail.com,7426916017
+330,331,TG THERAPS,Mohali,326214,tgtheraps@mail.com,3536109712
+331,332,VALEANT PHARMS,Kolkata,802499,valeantpharms@mail.com,9338850509
+332,333,VIELA BIO,DEF City,200515,vielabio@mail.com,7398728252
+333,334,HELSINN,Mumbai,607848,helsinn@mail.com,8246450147
+334,335,NEURELIS INC,Kolkata,588713,neurelisinc@mail.com,7233986014
+335,336,OSMOTICA PHARM,Dehradun,650180,osmoticapharm@mail.com,8220275920
+336,337,Bayer AG,DEF City,189803,bayerag@mail.com,3256660822
+337,338,CUMBERLAND PHARMS,Kolkata,126694,cumberlandpharms@mail.com,3061466415
+338,339,THERAVANCE INC,Dehradun,787241,theravanceinc@mail.com,1162314760
+339,340,ALLERGAN HOLDINGS,DEF City,825317,allerganholdings@mail.com,7099134743
+340,341,BRISTOL-MYERS SQUIBB,ABC City,769106,bristol-myerssquibb@mail.com,1311458577
+341,342,VIOKACE,Pune,568254,viokace@mail.com,8269240528
+342,343,ALKERMES,Mohali,674732,alkermes@mail.com,4508439915
+343,344,GLAXOSMITHKLINE CONS,Delhi,422873,glaxosmithklinecons@mail.com,2097664975
+344,345,MALLINCKRODT INC,Pune,486487,mallinckrodtinc@mail.com,1645333382
+345,346,SK LIFE,Dehradun,277868,sklife@mail.com,5185659238
+346,347,MERZ PHARMS,Pune,286576,merzpharms@mail.com,3788044895
+347,348,AUXILIUM PHARMS,ABC City,720595,auxiliumpharms@mail.com,8915558195
+348,349,KARYOPHARM THERAPS,Dehradun,957492,karyopharmtheraps@mail.com,3224934888
+349,350,ANTARES PHARMA INC,Mohali,993662,antarespharmainc@mail.com,6669528520
+350,351,JANSSEN PRODS,Delhi,176478,janssenprods@mail.com,2727963037
+351,352,CELLTRION,ABC City,700998,celltrion@mail.com,7804093705
+352,353,COHERUS BIOSCIENCES INC,Pune,629293,coherusbiosciencesinc@mail.com,2187088023
+353,354,AIMMUNE,Pune,127366,aimmune@mail.com,4770475289
+354,355,ZENPEP,Delhi,674980,zenpep@mail.com,2688043118
+355,356,CELGENE INTL,Dehradun,833286,celgeneintl@mail.com,6187616196
+356,357,RECRO GAINESVILLE,Dehradun,930287,recrogainesville@mail.com,2702214748
+357,358,STRIDES PHARMA,Kolkata,284920,stridespharma@mail.com,9416350761
+358,359,MARINUS PHARMACEUTICALS,Mohali,138062,marinuspharmaceuticals@mail.com,2431021605
+359,360,OREXO US INC,Delhi,393377,orexousinc@mail.com,4897457133
+360,361,SAGE THERAP,Mohali,631466,sagetherap@mail.com,2481706637
+361,362,INCYTE,DEF City,116695,incyte@mail.com,6353639317
+362,363,ELI LILLY CO,Dehradun,554363,elilillyco@mail.com,4549571239
