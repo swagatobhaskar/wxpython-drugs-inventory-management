@@ -3,11 +3,13 @@ from pubsub import pub
 
 from dialogs.login_dialog import LoginDialog
 from frames.products_window import ProductsWindow
+from database.db import ABC_wholesale_DB
 
 class RightPanel(wx.Panel):
     def __init__(self, parent):
         super().__init__(parent, style=wx.BORDER_SIMPLE)
 
+        self.database = ABC_wholesale_DB()
         self.SetBackgroundColour('#f8f8ff')
 
         # main vertical sizer for this panel   
@@ -34,7 +36,7 @@ class RightPanel(wx.Panel):
         self.logout_btn.Bind(wx.EVT_BUTTON, self.handleLogout)
         self.logout_btn.Hide()
 
-        self.btn_grid_panel = ButtonsGridPanel(self)
+        self.btn_grid_panel = ButtonsGridPanel(self, self.database)
         self.btn_grid_panel.Hide()
 
         #-----------------------------------------------------------
@@ -87,8 +89,10 @@ class RightPanel(wx.Panel):
 
 
 class ButtonsGridPanel(wx.Panel):
-    def __init__(self, parent):
+    def __init__(self, parent, database):
         super().__init__(parent)
+        
+        self.database = database
 
         self.grid_btns = wx.GridSizer(3, 3, 5, 5) # row, col, vgap, hgap
 
@@ -126,7 +130,7 @@ class ButtonsGridPanel(wx.Panel):
         self.SetSizer(self.grid_btns)
       
     def handleProducts(self, event):
-        self.products_window = ProductsWindow(self)
+        self.products_window = ProductsWindow(self, self.database)
         self.products_window.Show()
         
     def handleManufacturers(self, event):

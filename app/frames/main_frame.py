@@ -7,7 +7,7 @@ from frames.products_window import ProductsWindow
 class MainFrame(wx.Frame):
     def __init__(self, parent=None):
         super().__init__(parent, size=(900, 600), title='ABC Drugs')
-
+        
         self.InitMenubar()
 
         # Sizer for two panels
