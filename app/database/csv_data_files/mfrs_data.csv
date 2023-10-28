@@ -1,4 +1,4 @@
-,mfr_id,mfr_name,address_1,pin,email,phone
+,id,mfr_name,address_1,pin,email,phone
 0,1,OTSUKA,Mumbai,637793,otsuka@mail.com,2083135240
 1,2,OTSUKA PHARM CO LTD,Mumbai,100913,otsukapharmcoltd@mail.com,8617796496
 2,3,PFIZER INC,DEF City,610687,pfizerinc@mail.com,4181850981
