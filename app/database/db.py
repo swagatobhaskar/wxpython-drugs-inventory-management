@@ -6,7 +6,8 @@ import pathlib
 
 class ABC_wholesale_DB:
     def __init__(self) -> None:
-        self.conn = sqlite3.connect('./abc_wholesale.db')
+        SQL_DB_PATH = pathlib.Path.cwd()/'app/database/abc_wholesale.db'
+        self.conn = sqlite3.connect(SQL_DB_PATH)
         self.cursor = self.conn.cursor()
         self.create_tables()
 
@@ -19,14 +20,14 @@ class ABC_wholesale_DB:
         suppliers_df = pd.read_csv(csv_path / 'inventory-suppliers.csv', index_col=False)
 
         # Write the data to a sqlite table
-        medicines_df.to_sql(con=self.conn, name='medicines', if_exists='append', index=False)
-        mfrs_df.to_sql(con=self.conn, name='manufacturers', if_exists='append', index=False)
-        customers_df.to_sql(con=self.conn, name='customers', if_exists='append', index=False)
-        users_df.to_sql(con=self.conn, name='users', if_exists='append', index=False)
-        suppliers_df.to_sql(con=self.conn, name='suppliers', if_exists='append', index=False)
+        medicines_df.to_sql(con=self.conn, name='medicines', if_exists='replace', index=False)
+        mfrs_df.to_sql(con=self.conn, name='manufacturers', if_exists='replace', index=False)
+        customers_df.to_sql(con=self.conn, name='customers', if_exists='replace', index=False)
+        users_df.to_sql(con=self.conn, name='users', if_exists='replace', index=False)
+        suppliers_df.to_sql(con=self.conn, name='suppliers', if_exists='replace', index=False)
   
     def get_all_medicines(self):
-        self.cursor.execute('SELECT id, name, price, composition FROM medicines')
+        self.cursor.execute('SELECT * FROM medicines')
         return self.cursor.fetchall()
     
     def add_medicine(self, name, description):
