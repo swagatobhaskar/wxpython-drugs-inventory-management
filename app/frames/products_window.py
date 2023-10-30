@@ -48,8 +48,8 @@ class ViewTab(wx.Panel):
         # self.list = wx.ListCtrl(self, -1, style = wx.LC_REPORT)
         self.list_ctrl.InsertColumn(0, 'ID', width = 100)
         self.list_ctrl.InsertColumn(1, 'Name', wx.LIST_FORMAT_RIGHT, width = 100) 
-        self.list_ctrl.InsertColumn(2, 'Composition', wx.LIST_FORMAT_RIGHT, 100) 
-        self.list_ctrl.InsertColumn(3, 'Price', wx.LIST_FORMAT_RIGHT, 100) 
+        self.list_ctrl.InsertColumn(2, 'Price', wx.LIST_FORMAT_RIGHT, 100) 
+        self.list_ctrl.InsertColumn(3, 'Composition', wx.LIST_FORMAT_RIGHT, 100) 
         hbox_list.Add(self.list_ctrl, 1, wx.EXPAND | wx.ALL, 5)
         vbox.Add(hbox_list)
 
@@ -66,7 +66,6 @@ class ViewTab(wx.Panel):
         medicines = self.database.get_all_medicines()
         
         for medicine in medicines:
-            print("MEDICINE>> ", medicines)
             index = self.list_ctrl.InsertItem(sys.maxsize, str(medicine[0]))
             self.list_ctrl.SetItem(index, 0, medicine[4])
             self.list_ctrl.SetItem(index, 1, medicine[0])

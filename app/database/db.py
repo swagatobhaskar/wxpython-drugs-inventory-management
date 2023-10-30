@@ -12,11 +12,11 @@ class ABC_wholesale_DB:
 
     def create_tables(self):
         csv_path = pathlib.Path.cwd() / 'app/database/csv_data_files/'
-        medicines_df = pd.read_csv(csv_path / 'drugs-inventory-medicines-data.csv') 
-        mfrs_df = pd.read_csv(csv_path / 'mfrs_data.csv')
-        customers_df = pd.read_csv(csv_path / 'drugs-inventory-customers-data.csv')
-        users_df = pd.read_csv(csv_path / 'drugs-inventory-app-users.csv')
-        suppliers_df = pd.read_csv(csv_path / 'drugs-inventory-suppliers-data.csv')
+        medicines_df = pd.read_csv(csv_path / 'inventory-medicines.csv', index_col=False) 
+        mfrs_df = pd.read_csv(csv_path / 'mfrs_data.csv', index_col=False)
+        customers_df = pd.read_csv(csv_path / 'inventory-customers.csv', index_col=False)
+        users_df = pd.read_csv(csv_path / 'inventory-users.csv', index_col=False)
+        suppliers_df = pd.read_csv(csv_path / 'inventory-suppliers.csv', index_col=False)
 
         # Write the data to a sqlite table
         medicines_df.to_sql(con=self.conn, name='medicines', if_exists='append', index=False)
@@ -26,7 +26,7 @@ class ABC_wholesale_DB:
         suppliers_df.to_sql(con=self.conn, name='suppliers', if_exists='append', index=False)
   
     def get_all_medicines(self):
-        self.cursor.execute('SELECT * FROM medicines')
+        self.cursor.execute('SELECT id, name, price, composition FROM medicines')
         return self.cursor.fetchall()
     
     def add_medicine(self, name, description):
