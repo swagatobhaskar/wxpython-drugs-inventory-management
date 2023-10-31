@@ -48,3 +48,10 @@ class ABC_wholesale_DB:
     def delete_medicine(self, id):
         self.cursor.execute('DELETE FROM medicines WHERE id=?', (id,))
         self.conn.commit()
+
+    def check_user_exists(self, email, password):
+        self.cursor.execute('SELECT id FROM users WHERE email=? AND password=?',
+                                     (email, password))
+        self.conn.commit()
+        return self.cursor.fetchall()
+        

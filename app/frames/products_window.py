@@ -1,5 +1,4 @@
 import wx
-import sys
 
 class ProductsWindow(wx.Frame):
     def __init__(self, parent, database):

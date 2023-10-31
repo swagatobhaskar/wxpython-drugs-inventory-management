@@ -1,12 +1,13 @@
 import wx
 from pubsub import pub
+from database.db import ABC_wholesale_DB
 
 class LoginDialog(wx.Dialog):
     def __init__(self):
         super().__init__(None, title='Employee Login',
                          size=(400, 300), style=wx.DEFAULT_DIALOG_STYLE
                          )
-        
+        self.database = ABC_wholesale_DB()
         self.InitFormUI()
         self.Center()
 
@@ -17,12 +18,12 @@ class LoginDialog(wx.Dialog):
 
         # define the widgets
         emp_email_lbl = wx.StaticText(self, label="Email:")
-        emp_email_input = wx.TextCtrl(self, size=(220, 20)) # size=(width, height)
+        self.emp_email_input = wx.TextCtrl(self, size=(220, 20)) # size=(width, height)
         # emp_email_input.SetFont(font)
 
         # horizontal sizer for password label and input        
         emp_password_lbl = wx.StaticText(self, label="Password:")
-        emp_password_input = wx.TextCtrl(self, size=(220, 20),
+        self.emp_password_input = wx.TextCtrl(self, size=(220, 20),
                                          style=wx.TE_PASSWORD|wx.TE_PROCESS_ENTER
                                          )
         
@@ -50,12 +51,12 @@ class LoginDialog(wx.Dialog):
         
         self.hbox_email.AddMany([
             (emp_email_lbl, 0, wx.ALL | wx.RIGHT, 15),
-            (emp_email_input, 1, wx.EXPAND | wx.ALL, 5)
+            (self.emp_email_input, 1, wx.EXPAND | wx.ALL, 5)
             ])
         
         self.hbox_password.AddMany([
             (emp_password_lbl, 0, wx.ALL, 5),
-            (emp_password_input, 1, wx.EXPAND | wx.ALL, 5)
+            (self.emp_password_input, 1, wx.EXPAND | wx.ALL, 5)
             ])
         
         self.hbox_btns = wx.BoxSizer(wx.HORIZONTAL)
@@ -83,8 +84,17 @@ class LoginDialog(wx.Dialog):
         #----------------------------------------------------
 
     def handleLogin(self, event):
-        pub.sendMessage("loggedin_listener", message='true')
-        self.Destroy()      
+        email = self.emp_email_input.GetValue()
+        password = self.emp_password_input.GetValue()
+        result = self.database.check_user_exists(email, password)
+        
+        if len(result) == 0:
+            wx.MessageBox("No record found!", 'Warning', wx.OK | wx.ICON_WARNING)
+        elif len(result) == 1:
+            pub.sendMessage("loggedin_listener", message='true')
+            # set a logged in user state
+            loggedin_userid = result
+            self.Destroy()            
 
     def handleCancel(self, event):
         self.Destroy()
