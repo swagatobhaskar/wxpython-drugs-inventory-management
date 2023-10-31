@@ -1,5 +1,3 @@
-import wx
-import wx.lib.mixins.listctrl as listmix
 import sqlite3
 import pandas as pd
 import pathlib
@@ -53,5 +51,6 @@ class ABC_wholesale_DB:
         self.cursor.execute('SELECT id FROM users WHERE email=? AND password=?',
                                      (email, password))
         self.conn.commit()
-        return self.cursor.fetchall()
+        return self.cursor.fetchone()
         
+    

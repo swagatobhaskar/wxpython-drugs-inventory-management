@@ -82,8 +82,17 @@ class ViewTab(wx.Panel):
         selection = self.list_ctrl.GetFocusedItem()
         
 class AddTab(wx.Panel):
-    def __init__(self, parent):
+    def __init__(self, parent, database):
         super().__init__(parent)
+
+        self.database = database
+
+        self.grid = wx.FlexGridSizer(3, 4, 2, 4) # rows, cols, vgap, hgap
+
+        name = wx.StaticText(self, label='Medicine Name')
+        """
+        https://coderslegacy.com/wxpython-tutorial/flexgridsizer/
+        """
 
 class ModifyTab(wx.Panel):
     def __init__(self, parent):
