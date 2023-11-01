@@ -28,10 +28,11 @@ class ABC_wholesale_DB:
         self.cursor.execute('SELECT * FROM medicines')
         return self.cursor.fetchall()
     
-    def add_medicine(self, name, description):
+    def add_medicine(self, name, description, price, batch, exp, mfg, mfr_id):
         self.cursor.execute(
-            'INSERT INTO medicines (name, description) VALUES (?, ?)',
-              (name, description)
+            # auto add ID
+            'INSERT INTO medicines (name, price, mfr_id, composition, exp_date, batch_no, mfg_date) VALUES (?, ?, ?, ?, ?, ?, ?)',
+              (name, description, mfr_id, price, batch, exp, mfg)
               )
         self.conn.commit()
         # name,price,pack_size_label,short_composition,id,mfr_id,qty_in_stock,batch_no,exp_date,mfg_date

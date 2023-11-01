@@ -19,6 +19,7 @@ class LoginDialog(wx.Dialog):
         # define the widgets
         emp_email_lbl = wx.StaticText(self, label="Email:")
         self.emp_email_input = wx.TextCtrl(self, size=(220, 20)) # size=(width, height)
+        self.emp_email_input.AppendText('eve_johnson@hotmail.com')
         # emp_email_input.SetFont(font)
 
         # horizontal sizer for password label and input        
@@ -26,6 +27,7 @@ class LoginDialog(wx.Dialog):
         self.emp_password_input = wx.TextCtrl(self, size=(220, 20),
                                          style=wx.TE_PASSWORD|wx.TE_PROCESS_ENTER
                                          )
+        self.emp_password_input.AppendText('v0+4{\YR24nC')
         
         cancel_btn = wx.Button(self, label='Cancel')
         cancel_btn.Bind(wx.EVT_BUTTON, self.handleCancel)

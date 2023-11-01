@@ -14,8 +14,8 @@ class ProductsWindow(wx.Frame):
 
         # Create the page windows as children of the notebook.
         view_page = ViewTab(nb, self.database)
-        add_page = AddTab(nb)
-        modify_tab = ModifyTab(nb)
+        add_page = AddTab(nb, self.database)
+        modify_tab = ModifyTab(nb, self.database)
 
         # Add the pages to the notebook with the label to show on the tab.
         nb.AddPage(view_page, 'View')
@@ -80,6 +80,7 @@ class ViewTab(wx.Panel):
 
     def on_view_click(self, event):
         selection = self.list_ctrl.GetFocusedItem()
+        wx.MessageBox(str(selection))
         
 class AddTab(wx.Panel):
     def __init__(self, parent, database):
@@ -87,13 +88,89 @@ class AddTab(wx.Panel):
 
         self.database = database
 
-        self.grid = wx.FlexGridSizer(3, 4, 2, 4) # rows, cols, vgap, hgap
+        self.wrapper = wx.BoxSizer(wx.VERTICAL)
+        self.grid = wx.FlexGridSizer(4, 4, 10, 10) # rows, cols, vgap, hgap
 
-        name = wx.StaticText(self, label='Medicine Name')
-        """
-        https://coderslegacy.com/wxpython-tutorial/flexgridsizer/
-        """
+        med_name = wx.StaticText(self, label='Medicine Name')
+        self.med_name_input = wx.TextCtrl(self)
 
+        mfr_name = wx.StaticText(self, label='Manufacturer')
+        self.mfr_name_input = wx.TextCtrl(self)
+
+        price = wx.StaticText(self, label='Unit Price')
+        self.price_input = wx.TextCtrl(self)
+
+        exp_date = wx.StaticText(self, label='Expiry Date')
+        self.exp_date_input = wx.TextCtrl(self)
+
+        mfg_date = wx.StaticText(self, label='Manufactured Date')
+        self.mfg_date_input = wx.TextCtrl(self)
+
+        batchno = wx.StaticText(self, label='Batch No')
+        self.batchno_input = wx.TextCtrl(self)
+
+        composition = wx.StaticText(self, label='Composition')
+        self.composition_input = wx.TextCtrl(self)
+
+        self.grid.AddMany([
+            (med_name, 0),
+            (self.med_name_input, 1, wx.EXPAND),
+            (mfr_name, 0),
+            (self.mfr_name_input, 1, wx.EXPAND),
+            (price, 0),
+            (self.price_input, 1, wx.EXPAND),
+            (exp_date, 0),
+            (self.exp_date_input, 1, wx.EXPAND),
+            (mfg_date, 0),
+            (self.mfg_date_input, 1, wx.EXPAND),
+            (batchno, 0),
+            (self.batchno_input, 1, wx.EXPAND),
+            (composition, 0),
+            (self.composition_input, 1, wx.EXPAND)
+        ])
+
+        # self.grid.AddGrowableRow(0, 1)
+        # self.grid.AddGrowableRow(1, 1)
+        # self.grid.AddGrowableRow(2, 1)
+
+        self.hbox_btns = wx.BoxSizer(wx.HORIZONTAL)
+        
+        cancel_btn = wx.Button(self, label='Cancel')
+        cancel_btn.Bind(wx.EVT_BUTTON, self.handleCancel)
+        add_btn = wx.Button(self, label='Add')
+        add_btn.Bind(wx.EVT_BUTTON, self.addNewMedicine)
+
+        self.hbox_btns.AddMany([
+            (cancel_btn, 0, wx.ALL, 5),
+            (add_btn, 0, wx.ALL, 5)
+        ])
+
+        self.wrapper.Add(self.grid, 0, wx.ALL | wx.EXPAND | wx.ALIGN_CENTER, 5)
+        self.wrapper.Add(self.hbox_btns, 0, wx.ALIGN_RIGHT, 5)
+        self.SetSizer(self.wrapper)
+
+    def addNewMedicine(self, event):
+      
+        name = self.med_name_input.GetValue()
+        mfr = self.mfr_name_input.GetValue()
+        price = self.price_input.GetValue()
+        exp = self.exp_date_input.GetValue()
+        mfg = self.mfg_date_input.GetValue()
+        batch = self.batchno_input.GetValue()
+        composition = self.composition_input.GetValue()
+
+        self.database.add_medicine(name, mfr, price, exp, mfg, batch, composition)
+
+    def handleCancel(self, event):
+        self.Refresh()
+        # self.med_name_input.AppendText('')
+        # self.mfr_name_input.AppendText('')
+        # self.price_input.AppendText('')
+        # self.exp_date_input.AppendText('')
+        # self.mfg_date_input.AppendText('')
+        # self.batchno_input.AppendText('')
+        
 class ModifyTab(wx.Panel):
-    def __init__(self, parent):
+    def __init__(self, parent, database):
         super().__init__(parent)
+        self.database = database
