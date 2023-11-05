@@ -1,6 +1,7 @@
 import sqlite3
 import pandas as pd
 import pathlib
+import pubsub as pub
 
 class ABC_wholesale_DB:
     def __init__(self) -> None:
@@ -10,6 +11,39 @@ class ABC_wholesale_DB:
         self.create_tables()
 
     def create_tables(self):
+        # Manufacturers table
+        self.cursor.execute('''
+            CREATE TABLE IF NOT EXISTS manufacturers (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                mfr_name TEXT NOT NULL,
+                address TEXT,
+                pin TEXT,
+                email TEXT,
+                phone TEXT                        
+            )
+        ''')                            
+
+        # Medicines table
+        self.cursor.execute('''
+            CREATE TABLE IF NOT EXISTS medicines (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                name TEXT NOT NULL,
+                composition TEXT,
+                pack_size_label TEXT,
+                price REAL,
+                mfr_id INTEGER,
+                qty_in_stock INTEGER,
+                batch_no TEXT,
+                exp_date DATE,
+                mfg_date DATE,
+                FOREIGN KEY (mfr_id) REFERENCES manufacturer (id)
+            )
+        ''')
+
+        self.conn.commit()
+        # self.conn.close()
+        # commented as below pandas code can't operate on a closed database
+
         csv_path = pathlib.Path.cwd() / 'app/database/csv_data_files/'
         medicines_df = pd.read_csv(csv_path / 'inventory-medicines.csv', index_col=False) 
         mfrs_df = pd.read_csv(csv_path / 'mfrs_data.csv', index_col=False)
@@ -25,7 +59,7 @@ class ABC_wholesale_DB:
         suppliers_df.to_sql(con=self.conn, name='suppliers', if_exists='replace', index=False)
   
     def get_all_medicines(self):
-        self.cursor.execute('SELECT * FROM medicines')
+        self.cursor.execute('SELECT * FROM medicines LIMIT 100')
         return self.cursor.fetchall()
     
     def add_medicine(self, name, description, price, batch, exp, mfg, mfr_id):
@@ -35,7 +69,6 @@ class ABC_wholesale_DB:
               (name, description, mfr_id, price, batch, exp, mfg)
               )
         self.conn.commit()
-        # name,price,pack_size_label,short_composition,id,mfr_id,qty_in_stock,batch_no,exp_date,mfg_date
 
     def update_medicine(self, id, name, composition, price, qty_in_stock, batch_no, exp_date, mfg_date):
         self.cursor.execute(

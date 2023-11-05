@@ -1,4 +1,4 @@
-import wx
+import wx, pubsub as pub
 
 class ProductsWindow(wx.Frame):
     def __init__(self, parent, database):
@@ -69,14 +69,17 @@ class ViewTab(wx.Panel):
         
         index = 0
         for medicine in medicines:
-            # index = self.list_ctrl.InsertItem(sys.maxsize, medicine[0])
-            self.list_ctrl.InsertItem(index, medicine[0])
-            self.list_ctrl.SetItem(index, 1, medicine[1])
-            self.list_ctrl.SetItem(index, 2, str(medicine[4]))
-            self.list_ctrl.SetItem(index, 3, medicine[2])
-            self.list_ctrl.SetItem(index, 4, medicine[3])
-            self.list_ctrl.SetItem(index, 5, medicine[8])
-            index += 1
+            try:
+                # index = self.list_ctrl.InsertItem(sys.maxsize, medicine[0])
+                self.list_ctrl.InsertItem(index, medicine[0])
+                self.list_ctrl.SetItem(index, 1, medicine[1])
+                self.list_ctrl.SetItem(index, 2, str(medicine[4]))
+                self.list_ctrl.SetItem(index, 3, medicine[2])
+                self.list_ctrl.SetItem(index, 4, medicine[3])
+                self.list_ctrl.SetItem(index, 5, medicine[8])
+                index += 1
+            except TypeError:
+                print(medicine)
 
     def on_view_click(self, event):
         selection = self.list_ctrl.GetFocusedItem()
@@ -85,6 +88,8 @@ class ViewTab(wx.Panel):
 class AddTab(wx.Panel):
     def __init__(self, parent, database):
         super().__init__(parent)
+
+        # self.InitStatusbar()
 
         self.database = database
 
@@ -149,6 +154,10 @@ class AddTab(wx.Panel):
         self.wrapper.Add(self.hbox_btns, 0, wx.ALIGN_RIGHT, 5)
         self.SetSizer(self.wrapper)
 
+    def InitStatusbar(self):
+        self.statusbar = wx.StatusBar(self)
+        self.statusbar.SetStatusText('This goes in your statusbar')
+
     def addNewMedicine(self, event):
       
         name = self.med_name_input.GetValue()
@@ -158,8 +167,11 @@ class AddTab(wx.Panel):
         mfg = self.mfg_date_input.GetValue()
         batch = self.batchno_input.GetValue()
         composition = self.composition_input.GetValue()
+        print("to SQL: ", name, mfr, price, exp, mfg, batch)
 
         self.database.add_medicine(name, mfr, price, exp, mfg, batch, composition)
+ 
+        wx.MessageBox("Medicine Added!")
 
     def handleCancel(self, event):
         self.Refresh()
